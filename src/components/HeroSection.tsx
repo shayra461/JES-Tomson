@@ -78,16 +78,19 @@ const HeroSection = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    let lastTime = 0;
+    let triggered = false;
 
-    // Detect when video loops back (time resets) = cat jump moment
     const onTimeUpdate = () => {
-      const currentTime = video.currentTime;
-      // When time jumps backward, the video looped — trigger shatter
-      if (currentTime < lastTime - 0.5) {
+      const t = video.currentTime;
+      // Trigger shatter when cat jumps (between 3s and 4s)
+      if (t >= 3 && t < 4 && !triggered) {
+        triggered = true;
         triggerShatter();
       }
-      lastTime = currentTime;
+      // Reset flag after passing 4s or on loop (back to start)
+      if (t < 2 || t >= 5) {
+        triggered = false;
+      }
     };
 
     video.addEventListener("timeupdate", onTimeUpdate);
