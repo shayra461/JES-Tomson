@@ -76,14 +76,14 @@ const StoryBlock = ({ section, index }: { section: StorySection; index: number }
         <div
           ref={bgRef}
           className="absolute inset-0"
-          style={{ background: "linear-gradient(180deg, transparent, hsla(var(--alien-purple), 0.06), transparent)" }}
+          style={{ background: "linear-gradient(180deg, transparent, rgba(123,97,255,0.06), transparent)" }}
         />
       )}
 
       {/* Glowing divider line */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 story-divider"
-        style={{ background: "linear-gradient(to bottom, transparent, hsla(var(--neon-blue), 0.3), transparent)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, rgba(0,224,255,0.3), transparent)" }}
       />
 
       {section.hasCatEyes && (
@@ -91,8 +91,8 @@ const StoryBlock = ({ section, index }: { section: StorySection; index: number }
           ref={eyesRef}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-20 opacity-0"
         >
-          <div className="w-8 h-14 rounded-full" style={{ background: "hsla(var(--neon-blue), 0.4)", filter: "blur(6px)", boxShadow: "0 0 30px hsla(var(--neon-blue), 0.5)" }} />
-          <div className="w-8 h-14 rounded-full" style={{ background: "hsla(var(--neon-blue), 0.4)", filter: "blur(6px)", boxShadow: "0 0 30px hsla(var(--neon-blue), 0.5)" }} />
+          <div className="w-8 h-14 rounded-full" style={{ background: "rgba(0,224,255,0.4)", filter: "blur(6px)", boxShadow: "0 0 30px rgba(0,224,255,0.5)" }} />
+          <div className="w-8 h-14 rounded-full" style={{ background: "rgba(0,224,255,0.4)", filter: "blur(6px)", boxShadow: "0 0 30px rgba(0,224,255,0.5)" }} />
         </div>
       )}
 
