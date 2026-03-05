@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SectionReveal from "@/components/SectionReveal";
+import authorPhoto from "@/assets/author-photo.png";
 
 const About = () => (
   <div className="pt-28 pb-20 min-h-screen">
@@ -19,8 +20,8 @@ const About = () => (
           className="relative glass-panel neon-border p-8 md:p-12"
         >
           <div className="flex flex-col items-center mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-neon/20 to-alien-purple/20 neon-border flex items-center justify-center mb-6">
-              <span className="font-heading text-3xl text-primary text-glow">JES</span>
+            <div className="w-40 h-40 rounded-full neon-border overflow-hidden mb-6">
+              <img src={authorPhoto} alt="J.E.S. Tomson - Author" className="w-full h-full object-cover" />
             </div>
             <h2 className="font-heading text-2xl text-primary text-glow">J.E.S. Tomson</h2>
           </div>
