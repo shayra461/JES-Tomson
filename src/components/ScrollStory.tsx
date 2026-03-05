@@ -21,9 +21,9 @@ const sections: StorySection[] = [
   {
     chapter: "CHAPTER I",
     lines: [
-      { text: "Humanity expanded", className: "text-foreground" },
+      { text: "Humanity expanded", className: "text-white story-text-shadow" },
       { text: "beyond Earth.", className: "text-primary text-glow" },
-      { text: "But something ancient", className: "text-foreground" },
+      { text: "But something ancient", className: "text-white story-text-shadow" },
       { text: "was already watching.", className: "text-primary text-glow" },
     ],
     bgImage: storyBg1,
@@ -33,10 +33,10 @@ const sections: StorySection[] = [
   {
     chapter: "CHAPTER II",
     lines: [
-      { text: "Predators travel", className: "text-foreground" },
-      { text: "between stars,", className: "text-destructive" },
-      { text: "searching for new worlds", className: "text-foreground" },
-      { text: "to consume.", className: "text-destructive" },
+      { text: "Predators travel", className: "text-white story-text-shadow" },
+      { text: "between stars,", className: "text-destructive story-text-shadow-red" },
+      { text: "searching for new worlds", className: "text-white story-text-shadow" },
+      { text: "to consume.", className: "text-destructive story-text-shadow-red" },
     ],
     bgImage: storyBg2,
     overlayColor: "rgba(11,15,26,0.45)",
@@ -45,8 +45,8 @@ const sections: StorySection[] = [
   {
     chapter: "CHAPTER III",
     lines: [
-      { text: "But one species", className: "text-foreground" },
-      { text: "on Earth heard them first.", className: "text-foreground" },
+      { text: "But one species", className: "text-white story-text-shadow" },
+      { text: "on Earth heard them first.", className: "text-white story-text-shadow" },
       { text: "Cats.", className: "text-primary text-glow font-bold !text-5xl md:!text-8xl" },
     ],
     bgImage: storyBg3,
@@ -56,9 +56,9 @@ const sections: StorySection[] = [
   {
     chapter: "CHAPTER IV",
     lines: [
-      { text: "They can think.", className: "text-secondary text-glow-purple" },
-      { text: "They can speak.", className: "text-secondary text-glow-purple" },
-      { text: "And they know the invasion", className: "text-foreground" },
+      { text: "They can think.", className: "text-white text-glow-purple" },
+      { text: "They can speak.", className: "text-white text-glow-purple" },
+      { text: "And they know the invasion", className: "text-white story-text-shadow" },
       { text: "is coming.", className: "text-primary text-glow font-bold" },
     ],
     bgImage: storyBg4,
@@ -151,16 +151,16 @@ const StoryBlock = ({ section, index }: { section: StorySection; index: number }
       <div className="relative z-10 text-center px-6 max-w-4xl">
         {/* Chapter label */}
         <span ref={chapterRef} className="block font-heading text-xs md:text-sm tracking-[0.3em] uppercase mb-8 opacity-0"
-          style={{ color: section.accentColor }}>
+          style={{ color: section.accentColor, textShadow: `0 0 15px ${section.accentColor}` }}>
           {section.chapter}
         </span>
 
-        {/* Story text */}
-        <div className="space-y-2 md:space-y-3" style={{ perspective: "800px" }}>
+        {/* Story text — with backdrop for readability */}
+        <div className="space-y-2 md:space-y-3 py-8 px-6 rounded-2xl" style={{ perspective: "800px", background: "rgba(11,15,26,0.35)", backdropFilter: "blur(4px)" }}>
           {section.lines.map((line, i) => (
             <p key={i}
               ref={(el) => { textRefs.current[i] = el; }}
-              className={`text-2xl md:text-5xl lg:text-6xl font-heading font-light leading-tight opacity-0 ${line.className || ""}`}
+              className={`text-2xl md:text-5xl lg:text-6xl font-heading font-semibold leading-tight opacity-0 ${line.className || ""}`}
             >
               {line.text}
             </p>
