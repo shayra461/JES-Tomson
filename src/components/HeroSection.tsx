@@ -227,22 +227,6 @@ const HeroSection = () => {
         style={{ background: "radial-gradient(circle, rgba(123,97,255,0.04) 0%, transparent 60%)" }}
       />
 
-      {/* Cat eyes (faint behind video) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 3 }}
-        className="absolute top-[28%] left-1/2 -translate-x-1/2 flex gap-16 z-[1]"
-      >
-        <div
-          className="w-6 h-10 rounded-full animate-pulse-glow"
-          style={{ background: "rgba(0,224,255,0.4)", filter: "blur(3px)", animationDelay: "0s" }}
-        />
-        <div
-          className="w-6 h-10 rounded-full animate-pulse-glow"
-          style={{ background: "rgba(0,224,255,0.4)", filter: "blur(3px)", animationDelay: "0.5s" }}
-        />
-      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
