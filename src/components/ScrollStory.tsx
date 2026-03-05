@@ -155,12 +155,12 @@ const StoryBlock = ({ section, index }: { section: StorySection; index: number }
           {section.chapter}
         </span>
 
-        {/* Story text — with backdrop for readability */}
-        <div className="space-y-2 md:space-y-3 py-8 px-6 rounded-2xl" style={{ perspective: "800px", background: "rgba(11,15,26,0.35)", backdropFilter: "blur(4px)" }}>
+        {/* Story text */}
+        <div className="space-y-2 md:space-y-3" style={{ perspective: "800px" }}>
           {section.lines.map((line, i) => (
             <p key={i}
               ref={(el) => { textRefs.current[i] = el; }}
-              className={`text-2xl md:text-5xl lg:text-6xl font-heading font-semibold leading-tight opacity-0 ${line.className || ""}`}
+              className={`text-2xl md:text-5xl lg:text-6xl font-heading font-light leading-tight opacity-0 ${line.className || ""}`}
             >
               {line.text}
             </p>
