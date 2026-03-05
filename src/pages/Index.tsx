@@ -48,8 +48,12 @@ const Index = () => {
         <div className="glass-panel max-w-2xl mx-auto p-12 neon-border">
           <h3 className="font-heading text-2xl md:text-3xl text-primary text-glow mb-4">Ready to Join the War?</h3>
           <p className="text-muted-foreground mb-8">Discover why cats may be humanity's last hope.</p>
-          <button onClick={() => navigate("/books")} className="btn-glow px-8 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-primary">
-            Start Reading
+          <button onClick={() => navigate("/books")} className="btn-glow px-10 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-primary relative z-10">
+            <span className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Start Reading
+              <span className="text-primary/60">→</span>
+            </span>
           </button>
         </div>
       </SectionReveal>
