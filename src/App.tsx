@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import Particles from "@/components/Particles";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import CatCharacter from "@/components/CatCharacter";
+
 import SurpriseMoments from "@/components/SurpriseMoments";
 import SmoothScroll from "@/components/SmoothScroll";
 import Index from "./pages/Index";
@@ -28,7 +28,7 @@ const App = () => (
       <BrowserRouter>
         <SmoothScroll />
         <CustomCursor />
-        <CatCharacter />
+        
         <SurpriseMoments />
         <Particles />
         <Navigation />
