@@ -57,17 +57,17 @@ const SurpriseMoments = () => {
     const intervals: ReturnType<typeof setTimeout>[] = [];
 
     const scheduleEyes = () => {
-      const delay = 25000 + Math.random() * 30000;
+      const delay = 8000 + Math.random() * 7000; // 8-15s
       intervals.push(setTimeout(() => { showEyes(); scheduleEyes(); }, delay));
     };
     const schedulePaws = () => {
-      const delay = 35000 + Math.random() * 25000;
+      const delay = 10000 + Math.random() * 8000; // 10-18s
       intervals.push(setTimeout(() => { showPaws(); schedulePaws(); }, delay));
     };
 
-    // First triggers - faster so user sees them
-    intervals.push(setTimeout(showEyes, 6000 + Math.random() * 4000));
-    intervals.push(setTimeout(showPaws, 10000 + Math.random() * 5000));
+    // First triggers - appear quickly
+    intervals.push(setTimeout(showEyes, 2000 + Math.random() * 2000));
+    intervals.push(setTimeout(showPaws, 4000 + Math.random() * 3000));
     scheduleEyes();
     schedulePaws();
 
