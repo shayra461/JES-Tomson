@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Particles from "@/components/Particles";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+import CatCharacter from "@/components/CatCharacter";
+import SurpriseMoments from "@/components/SurpriseMoments";
+import SmoothScroll from "@/components/SmoothScroll";
 import Index from "./pages/Index";
 import Books from "./pages/Books";
 import Universe from "./pages/Universe";
@@ -22,6 +26,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SmoothScroll />
+        <CustomCursor />
+        <CatCharacter />
+        <SurpriseMoments />
         <Particles />
         <Navigation />
         <main className="relative z-10">
