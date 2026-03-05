@@ -55,7 +55,7 @@ const HeroSection = () => {
       const glitchWords = headlineRef.current?.querySelectorAll(".hero-glitch");
       if (glitchWords?.length) {
         gsap.to(glitchWords, {
-          textShadow: "2px 0 hsl(var(--alien-purple)), -2px 0 hsl(var(--neon-blue))",
+          textShadow: "2px 0 #7B61FF, -2px 0 #00E0FF",
           duration: 0.1,
           repeat: 3,
           yoyo: true,
@@ -63,7 +63,7 @@ const HeroSection = () => {
           ease: "steps(1)",
           onComplete: () => {
             gsap.to(glitchWords, {
-              textShadow: "0 0 20px hsla(var(--neon-blue), 0.6), 0 0 40px hsla(var(--neon-blue), 0.3)",
+              textShadow: "0 0 20px rgba(0,224,255,0.6), 0 0 40px rgba(0,224,255,0.3)",
               duration: 0.5,
             });
           },
@@ -100,16 +100,16 @@ const HeroSection = () => {
       <div
         ref={nebulaRef1}
         className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full hero-light-pulse"
-        style={{ background: "radial-gradient(circle, hsla(var(--alien-purple), 0.12) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(123,97,255,0.12) 0%, transparent 70%)" }}
       />
       <div
         ref={nebulaRef2}
         className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full hero-light-pulse"
-        style={{ background: "radial-gradient(circle, hsla(var(--neon-blue), 0.08) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(0,224,255,0.08) 0%, transparent 70%)" }}
       />
 
       {/* Extra radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full hero-light-pulse" style={{ background: "radial-gradient(circle, hsla(var(--alien-purple), 0.05) 0%, transparent 60%)" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full hero-light-pulse" style={{ background: "radial-gradient(circle, rgba(123,97,255,0.05) 0%, transparent 60%)" }} />
 
       {/* Cat eyes */}
       <motion.div
@@ -118,8 +118,8 @@ const HeroSection = () => {
         transition={{ delay: 2, duration: 3 }}
         className="absolute top-[28%] left-1/2 -translate-x-1/2 flex gap-16"
       >
-        <div className="w-6 h-10 rounded-full animate-pulse-glow" style={{ background: "hsla(var(--neon-blue), 0.6)", filter: "blur(2px)", animationDelay: "0s" }} />
-        <div className="w-6 h-10 rounded-full animate-pulse-glow" style={{ background: "hsla(var(--neon-blue), 0.6)", filter: "blur(2px)", animationDelay: "0.5s" }} />
+        <div className="w-6 h-10 rounded-full animate-pulse-glow" style={{ background: "rgba(0,224,255,0.6)", filter: "blur(2px)", animationDelay: "0s" }} />
+        <div className="w-6 h-10 rounded-full animate-pulse-glow" style={{ background: "rgba(0,224,255,0.6)", filter: "blur(2px)", animationDelay: "0.5s" }} />
       </motion.div>
 
       {/* Content */}
