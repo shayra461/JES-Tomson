@@ -270,15 +270,23 @@ const HeroSection = () => {
         >
           <Link
             to="/universe"
-            className="btn-glow px-8 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-primary"
+            className="btn-glow px-10 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-primary relative z-10"
           >
-            Explore the Story
+            <span className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Explore the Story
+              <span className="text-primary/60">→</span>
+            </span>
           </Link>
           <Link
             to="/books"
-            className="btn-glow-purple px-8 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-secondary"
+            className="btn-glow-purple px-10 py-4 rounded-lg font-heading text-sm tracking-widest uppercase text-secondary relative z-10"
           >
-            View the Books
+            <span className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              View the Books
+              <span className="text-secondary/60">→</span>
+            </span>
           </Link>
         </motion.div>
       </div>
