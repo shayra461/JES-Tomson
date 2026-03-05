@@ -75,19 +75,25 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    // Shatter loop — synced roughly to a cat-jump cycle (~4s)
-    const shatterInterval = setInterval(() => {
-      triggerShatter();
-    }, 4000);
+    const video = videoRef.current;
+    if (!video) return;
 
-    // Also trigger once initially after intro animations finish
-    const initialTimeout = setTimeout(() => {
-      triggerShatter();
-    }, 2800);
+    let lastTime = 0;
+
+    // Detect when video loops back (time resets) = cat jump moment
+    const onTimeUpdate = () => {
+      const currentTime = video.currentTime;
+      // When time jumps backward, the video looped — trigger shatter
+      if (currentTime < lastTime - 0.5) {
+        triggerShatter();
+      }
+      lastTime = currentTime;
+    };
+
+    video.addEventListener("timeupdate", onTimeUpdate);
 
     return () => {
-      clearInterval(shatterInterval);
-      clearTimeout(initialTimeout);
+      video.removeEventListener("timeupdate", onTimeUpdate);
     };
   }, [triggerShatter]);
 
