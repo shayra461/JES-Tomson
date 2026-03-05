@@ -70,13 +70,26 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 20px hsla(var(--neon-blue), 0.6),
-                 0 0 40px hsla(var(--neon-blue), 0.3);
+    text-shadow: 0 0 10px hsla(var(--neon-blue), 0.9),
+                 0 0 30px hsla(var(--neon-blue), 0.6),
+                 0 0 60px hsla(var(--neon-blue), 0.3);
   }
 
   .text-glow-purple {
-    text-shadow: 0 0 20px hsla(var(--alien-purple), 0.6),
-                 0 0 40px hsla(var(--alien-purple), 0.3);
+    text-shadow: 0 0 10px hsla(var(--alien-purple), 0.9),
+                 0 0 30px hsla(var(--alien-purple), 0.6),
+                 0 0 60px hsla(var(--alien-purple), 0.3);
+  }
+
+  .story-text-shadow {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9),
+                 0 0 30px rgba(0,0,0,0.6);
+  }
+
+  .story-text-shadow-red {
+    text-shadow: 0 0 10px rgba(255,59,59,0.8),
+                 0 0 30px rgba(255,59,59,0.4),
+                 0 2px 8px rgba(0,0,0,0.9);
   }
 
   .neon-border {
