@@ -187,7 +187,7 @@ const HeroSection = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.35) saturate(1.3) contrast(1.1)" }}
         >
-          <source src="/videos/hero-cat.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}videos/hero-cat.mp4`} type="video/mp4" />
         </video>
         {/* Color overlay to blend with theme */}
         <div
