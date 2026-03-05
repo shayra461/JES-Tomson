@@ -19,7 +19,7 @@ const Footer = () => (
             </Link>
           ))}
         </div>
-        <p className="text-muted-foreground text-xs">© 2026 J.E.S. Tomson. All rights reserved.</p>
+        <p className="text-muted-foreground text-xs">&copy; 2026 De'logo Studio. all Right reserved.</p>
       </div>
     </div>
   </footer>
