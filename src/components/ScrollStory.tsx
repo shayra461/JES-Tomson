@@ -150,8 +150,8 @@ const StoryBlock = ({ section, index }: { section: StorySection; index: number }
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
         {/* Chapter label */}
-        <span ref={chapterRef} className="block font-heading text-xs md:text-sm tracking-[0.3em] uppercase mb-8 opacity-0"
-          style={{ color: section.accentColor, textShadow: `0 0 15px ${section.accentColor}` }}>
+        <span ref={chapterRef} className="block font-heading text-sm md:text-base tracking-[0.3em] uppercase mb-8 opacity-0 font-semibold"
+          style={{ color: "#fff", textShadow: `0 0 20px ${section.accentColor}, 0 0 40px ${section.accentColor}, 0 2px 8px rgba(0,0,0,0.9)` }}>
           {section.chapter}
         </span>
 
@@ -244,14 +244,14 @@ const ScrollStory = () => {
         }} />
 
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <span ref={subtitleRef} className="block font-heading text-xs md:text-sm tracking-[0.4em] uppercase text-secondary mb-6 opacity-0">
+          <span ref={subtitleRef} className="block font-heading text-sm md:text-base tracking-[0.4em] uppercase text-white mb-6 opacity-0 font-semibold story-text-shadow" style={{ textShadow: "0 0 20px #7B61FF, 0 0 40px #7B61FF, 0 2px 8px rgba(0,0,0,0.9)" }}>
             The Saga Begins
           </span>
           <h2 ref={titleRef}
             className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary text-glow mb-8 opacity-0">
             The Murkatz War
           </h2>
-          <p ref={descRef} className="text-lg md:text-xl text-muted-foreground leading-relaxed opacity-0 max-w-2xl mx-auto">
+          <p ref={descRef} className="text-lg md:text-xl text-white/90 leading-relaxed opacity-0 max-w-2xl mx-auto story-text-shadow">
             A science fiction trilogy about survival, telepathic cats, alien predators, and the fragile alliance that may save Earth.
           </p>
 
